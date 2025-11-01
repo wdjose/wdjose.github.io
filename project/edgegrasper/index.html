@@ -1,0 +1,131 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="EdgeGrasper is a polygon segmentation-based technique for grasp detection.">
+  <meta name="keywords" content="EdgeGrasper, grasp detection">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EdgeGrasper</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">EdgeGrasper: Fast Polygon Segmentation-Based Grasp Detection </h1>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="./static/edgegrasper.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+                    </svg>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+            </div>
+          </div>
+
+          <div class="column has-text-centered">
+            <!-- <div class="is-size-5 publication-venue">
+                
+            </div> -->
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-max-desktop">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Robotic grasping is a critical ability to enable robots to
+            manipulate generic objects in real-world environments.
+            Grasp detection is a formulation of robotic grasping in
+            from the two dimensional perspective. Recent works address
+            the grasp detection problem using deep learning by training
+            end-to-end convolutional neural network models on grasp
+            detection datasets. However, they are not formulated to
+            explicitly take advantage of existing priors available from
+            computer vision models, such as object detection and
+            instance segmentation. Guided by this insight, we propose
+            EdgeGrasper, a fast polygon segmentation-based grasp
+            detection network that leverages the edges of an instance
+            segmentation efficiently produce grasping point candidates.
+            EdgeGrasper defines grasp detection candidates using pairs
+            of vertices of the polygon representing the instance
+            segmentation of the object, where the midpoint,
+            orientation, and distance of the pair of points directly
+            define the grasp. EdgeGrasper takes a list of vertices as
+            input to a lightweight multilayer perceptron-based network
+            that predicts grasp confidence between all possible pairs
+            of points. We show the ability of our method to perform
+            fast and robust robot grasp detection against existing
+            methods by evaluating on two challenging grasp detection
+            datasets. We also deploy EdgeGrasper to a real-world Franka
+            Research 3 robot arm successfully demonstrate grasp
+            execution of various everyday objects on a table top. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed
+            under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
