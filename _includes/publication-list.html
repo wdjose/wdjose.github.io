@@ -1,0 +1,41 @@
+{% comment %}
+  Renders publications from _data/publications.yml using the site's original table markup.
+  Usage: {% include publication-list.html selected=true %}  -> only entries with `selected: true`
+         {% include publication-list.html preprints=false %} -> peer-reviewed only
+         {% include publication-list.html preprints=true %}  -> preprints only
+{% endcomment %}
+{% include base_path %}
+{% assign me = "Williard Joshua Jose" %}
+<table style="width:100%;border:0px;border-width:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+{% for pub in site.data.publications %}
+  {% if include.selected and pub.selected != true %}{% continue %}{% endif %}
+  {% if include.preprints == true and pub.preprint != true %}{% continue %}{% endif %}
+  {% if include.preprints == false and pub.preprint == true %}{% continue %}{% endif %}
+  <tr id="{{ pub.id }}">
+    <td style="border:none;padding:16px;width:20%;vertical-align:middle">
+      <img src="{{ base_path }}/images/{{ pub.thumb }}" alt="Figure from {{ pub.title | escape }}" width="160" height="160" loading="lazy" decoding="async">
+    </td>
+    <td style="border:none;padding:8px;width:80%;vertical-align:middle">
+      <strong>{{ pub.title }}</strong>
+      <br>
+      {% for a in pub.authors %}{% if a == me %}<u>{{ a }}</u>{% else %}{{ a }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}
+      {% for v in pub.venues %}
+      <br />
+      <em>{{ v.name }}</em>{% if v.year %}, {{ v.year }}{% endif %}
+      {% endfor %}
+      {% if pub.award %}
+      <br />
+      <span style="color: #ff3860;">{{ pub.award }}</span>
+      {% endif %}
+      <br />
+      {% for l in pub.links %}<a href="{% if l.url contains '://' %}{{ l.url }}{% else %}{{ base_path }}{{ l.url }}{% endif %}" aria-label="{{ l.label }}: {{ pub.title | escape }}">{{ l.label }}</a>{% unless forloop.last %}
+      |
+      {% endunless %}{% endfor %}
+      <p></p>
+      <p>
+      {{ pub.summary }}
+      </p>
+    </td>
+  </tr>
+{% endfor %}
+</tbody></table>

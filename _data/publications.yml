@@ -1,0 +1,174 @@
+# Publications, newest first. Rendered by _includes/publication-list.html.
+# `selected: true` entries also appear on the home page.
+# `preprint: true` entries are listed under "Preprints" on /publications/.
+# Only list preprints that have a public paper or project link.
+
+- id: cfpg
+  title: "Adapting Execution-Time Objectives for Multi-Robot Policies via Collaborative Flow Policy Guidance"
+  authors: ["Williard Joshua Jose", "Yuhao Li", "Zihao Deng", "Hao Zhang"]
+  venues:
+    - {name: "Robotics: Science and Systems (RSS)", year: 2026}
+  thumb: cfpg-thumbnail.png
+  selected: true
+  links:
+    - label: Paper
+      url: https://hcrlab.gitlab.io/project/cfpg/static/cfpg.pdf
+    - label: Supplementary
+      url: https://hcrlab.gitlab.io/project/cfpg/static/supp.pdf
+    - label: Page
+      url: https://hcrlab.gitlab.io/project/cfpg/
+  summary: >-
+    We present Collaborative Flow Policy Guidance, a novel framework that enables the modification of existing collaborative multi-robot policies by composing objectives during execution time.
+    We introduce Multi-Agent Flow Policy Optimization (MAFPO) to learn collaborative policies in a fully on-policy manner.
+    We also enable training-free adaptation to new execution-time objectives by leveraging flow matching guidance together with a hierarchical gradient projection mechanism to resolve conflicts among the nominal objective and execution objectives.
+
+- id: cqtd
+  title: "Collaborative Quadruped Transportation in 3D Terrain with Constrained Diffusion"
+  authors: ["Williard Joshua Jose", "Li Chen", "Hao Zhang"]
+  venues:
+    - {name: "IEEE International Conference on Robotics and Automation (ICRA)", year: 2026}
+    - {name: "Workshop on Multi-Agent Path Finding @ AAAI", year: 2026}
+  thumb: cqtd-thumbnail.png
+  selected: true
+  links:
+    - label: Paper
+      url: https://hcrlab.gitlab.io/project/cqtd/static/cqtd.pdf
+    - label: Page
+      url: https://hcrlab.gitlab.io/project/cqtd/
+  summary: >-
+    We present Collaborative Quadruped Transportation with Constrained Diffusion (CQTD), enabling a team of closely coupled quadruped robots to collaboratively transport a payload across 3D terrain.
+    A diffusion-based upper level learns terrain-aware team-level trajectories satisfying team kinematic constraints due to the payload coupling, while a lower level optimizes velocity controls of individual robots satisfying collision and anisotropic velocity constraints.
+
+- id: ohcf
+  preprint: true
+  title: "Harmonizing Team and Individual Goals in Decentralized Multi-Robot Fire Suppression through Curriculum Reinforcement Learning"
+  authors: ["Williard Joshua Jose", "Yuhao Li", "Hao Zhang"]
+  venues:
+    - {name: "Under review"}
+  thumb: ohcf-thumbnail.png
+  links:
+    - label: Paper
+      url: /project/ohcf/static/ohcf.pdf
+    - label: Page
+      url: https://icra-ohcf.github.io/
+  summary: >-
+    We propose Objective Harmonization Curriculum for Fire Suppression (OHCF), a method that integrates curriculum learning with multi-agent reinforcement learning (MARL).
+    We design a novel three-stage curriculum that guides the learning process by initially prioritizing individual objectives to build foundational skills, then gradually shifting the reward structure to emphasize the collective goal, and finally refining the policy to optimize efficient team coordination.
+
+- id: edgegrasper
+  preprint: true
+  title: "EdgeGrasper: Fast Polygon Segmentation-Based Grasp Detection"
+  authors: ["Williard Joshua Jose", "Bertram David Matabang", "Joemer Aliman", "Michel Onasis Ogbinar", "Rowel Atienza"]
+  venues:
+    - {name: "Under review"}
+  thumb: edgegrasper-thumbnail.png
+  links:
+    - label: Paper
+      url: /project/edgegrasper/static/edgegrasper.pdf
+    - label: Page
+      url: /project/edgegrasper/
+  summary: >-
+    We propose EdgeGrasper, a fast polygon segmentation-based grasp detection network that leverages the edges of an instance segmentation efficiently produce grasping point candidates.
+    EdgeGrasper defines grasp detection candidates using pairs of vertices of the polygon representing the instance segmentation of the object, where the midpoint, orientation, and distance of the pair of points directly define the grasp.
+
+- id: blct
+  preprint: true
+  title: "Bilevel Learning for Dual-Quadruped Collaborative Transportation under Kinematic and Anisotropic Velocity Constraints"
+  authors: ["Williard Joshua Jose", "Hao Zhang"]
+  venues:
+    - {name: "Under review"}
+  thumb: blct-thumbnail.png
+  links:
+    - label: Paper
+      url: https://arxiv.org/abs/2412.08644
+    - label: Page
+      url: https://hcrlab.gitlab.io/project/blct/
+  summary: >-
+    We propose a novel Bilevel Learning for Collaborative Transportation (BLCT) approach.
+    In the upper-level, BLCT learns a team collaboration policy for the two quadruped robots to move the payload to the goal position, while accounting for the kinematic constraints imposed by their connection to the payload.
+    In the lower-level, BLCT optimizes velocity controls of each individual robot to closely follow the collaboration policy while satisfying the anisotropic velocity constraints and avoiding obstacles.
+
+- id: staf
+  title: "Subteaming and Adaptive Formation Control for Coordinated Multi-Robot Navigation"
+  authors: ["Zihao Deng", "Peng Gao", "Williard Joshua Jose", "Maggie Wigness", "John Rogers", "Brian Reily", "Christopher Reardon", "Hao Zhang"]
+  venues:
+    - {name: "Conference on Robot Learning (CoRL)", year: 2025}
+  thumb: staf-thumbnail.png
+  links:
+    - label: Paper
+      url: https://proceedings.mlr.press/v305/deng25b.html
+    - label: Page
+      url: https://hcrlab.gitlab.io/project/STAF/
+  summary: >-
+    We introduce a novel method for SubTeaming and Adaptive Formation (STAF) to enable coordinated multi-robot navigation in complex and challenging scenarios.
+    STAF is built upon a unified hierarchical learning framework that incorporates (1) high-level deep graph cut, (2) intermediate-level graph learning, and (3) low-level policy learning.
+
+- id: afor
+  title: "Coordinated Multi-Robot Navigation with Formation Adaptation"
+  authors: ["Zihao Deng", "Peng Gao", "Williard Joshua Jose", "Christopher Reardon", "Maggie Wigness", "John Rogers", "Hao Zhang"]
+  venues:
+    - {name: "IEEE International Conference on Robotics and Automation (ICRA)", year: 2025}
+  thumb: afor-thumbnail.png
+  links:
+    - label: Paper
+      url: https://ieeexplore.ieee.org/document/11128457/
+    - label: Page
+      url: https://hcrlab.gitlab.io/project/afor/
+  summary: >-
+    We introduce a novel Adaptive Formation with Oscillation Reduction (AFOR) approach to improve coordinated multi-robot navigation.
+    We develop AFOR under the theoretical framework of hierarchical learning and integrate a spring-damper model with hierarchical learning to enable both team coordination and individual robot control.
+
+- id: acoid
+  title: "Bandwidth-Adaptive Spatiotemporal Correspondence Identification for Collaborative Perception"
+  authors: ["Peng Gao", "Williard Joshua Jose", "Hao Zhang"]
+  venues:
+    - {name: "IEEE International Conference on Robotics and Automation (ICRA)", year: 2025}
+  thumb: acoid-thumbnail.png
+  links:
+    - label: Paper
+      url: https://ieeexplore.ieee.org/document/11127581/
+    - label: Page
+      url: https://gaopeng5.github.io/acoid/
+  summary: >-
+    We propose a novel approach of bandwidth-adaptive spatiotemporal CoID for collaborative perception, where robots interactively select partial spatiotemporal observations to share with others, while adapting to the communication constraint that dynamically changes over time.
+
+- id: lvws
+  title: "Learning for Dynamic Subteaming and Voluntary Waiting in Heterogeneous Multi-Robot Collaborative Scheduling"
+  authors: ["Williard Joshua Jose", "Hao Zhang"]
+  venues:
+    - {name: "IEEE International Conference on Robotics and Automation (ICRA)", year: 2024}
+  award: "Best Paper Award Finalist on Multi-Robot Systems"
+  thumb: lvws-thumbnail.png
+  selected: true
+  links:
+    - label: Paper
+      url: https://ieeexplore.ieee.org/abstract/document/10610342/
+    - label: Page
+      url: https://hcrlab.gitlab.io/project/lvws/
+  summary: >-
+    We introduce a new graph learning approach that formulates heterogeneous collaborative scheduling as a bipartite matching problem that maximizes a reward matrix learned via imitation learning. We design a novel graph attention transformer network (GATN) that represents the problem of collaborative scheduling as a bipartite graph, and integrates both local and global graph information to estimate the reward matrix using graph attention networks and transformers.
+
+- id: amrconvnet
+  title: "AMRConvNet: AMR-Coded Speech Enhancement Using Convolutional Neural Networks"
+  authors: ["Williard Joshua Jose"]
+  venues:
+    - {name: "IEEE International Conference on Systems, Man, and Cybernetics (SMC)", year: 2020}
+  thumb: amrconvnet-thumbnail.png
+  links:
+    - label: Paper
+      url: https://ieeexplore.ieee.org/document/9283346/
+  summary: >-
+    We introduce AMRConvNet: a convolutional neural network that performs ABE and speech enhancement on speech encoded with AMR.
+    The model operates directly on the time-domain for both input and output speech but optimizes using combined time-domain reconstruction loss and frequency-domain perceptual loss.
+
+- id: biped
+  title: "Development of a 3D-Printed Biped Robot with Distributed Joint Control"
+  authors: ["Williard Joshua Jose", "Manuel Ramos, Jr."]
+  venues:
+    - {name: "IEEE International Conference on Control, Automation and Robotics (ICCAR)", year: 2018}
+  thumb: biped-thumbnail.png
+  links:
+    - label: Paper
+      url: https://ieeexplore.ieee.org/document/8384647/
+  summary: >-
+    We develop a low-cost 10 degree of freedom robot including its mechanical design (designed on Solidworks, 3D printed and lasercut), electronic design (decentralized microcontroller-based joint motor controllers), and control design (joint-level PID controllers).
